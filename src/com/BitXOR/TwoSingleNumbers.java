@@ -38,9 +38,9 @@ public class TwoSingleNumbers {
         int num1 = 0;
         int num2 = 0;
         for (int i = 0; i < arr.length; i++) {
-            if ((arr[i] & rightmostSetBit) == 0)//bit is set
+            if ((arr[i] & rightmostSetBit) == 0)//bit is not set
                 num1 ^= arr[i];
-            else                              //bit is not set
+            else                              //bit is set
                 num2 ^= arr[i];
         }
         return new int[]{num1, num2};
