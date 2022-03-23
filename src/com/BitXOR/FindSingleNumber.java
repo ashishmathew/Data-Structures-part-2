@@ -1,6 +1,6 @@
 package com.BitXOR;
 
-public class Main {
+public class FindSingleNumber {
 
     public static void main(String[] args) {
         System.out.println(findSingleNumber(new int[]{1, 4, 2, 1, 3,3,4}));
