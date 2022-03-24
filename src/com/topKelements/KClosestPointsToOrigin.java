@@ -1,4 +1,5 @@
 package com.topKelements;
+
 import java.util.*;
 
 class Point {
@@ -19,14 +20,14 @@ class Point {
 class KClosestPointsToOrigin {
 
     public static List<Point> findClosestPoints(Point[] points, int k) {
-        PriorityQueue<Point> pq = new PriorityQueue<>((p1,p2)->p2.distFromOrigin() - p1.distFromOrigin());
+        PriorityQueue<Point> pq = new PriorityQueue<>((p1, p2) -> p2.distFromOrigin() - p1.distFromOrigin());
 
         for (int i = 0; i < k; i++) {
             pq.add(points[i]);
         }
 
         for (int i = k; i < points.length; i++) {
-            if(points[i].distFromOrigin() < pq.peek().distFromOrigin()){
+            if (points[i].distFromOrigin() < pq.peek().distFromOrigin()) {
                 pq.poll();
                 pq.add(points[i]);
             }
@@ -38,7 +39,7 @@ class KClosestPointsToOrigin {
     }
 
     public static void main(String[] args) {
-        Point[] points = new Point[] { new Point(1, 3), new Point(3, 4), new Point(2, -1) };
+        Point[] points = new Point[]{new Point(1, 3), new Point(3, 4), new Point(2, -1)};
         List<Point> result = KClosestPointsToOrigin.findClosestPoints(points, 2);
         System.out.print("Here are the k points closest the origin: ");
         for (Point p : result)
