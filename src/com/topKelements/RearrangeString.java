@@ -1,6 +1,4 @@
 package com.topKelements;
-
-
 import java.util.*;
 
 class RearrangeString {
