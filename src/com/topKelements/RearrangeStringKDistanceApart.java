@@ -10,7 +10,6 @@ class RearrangeStringKDistanceApart {
         for (int i = 0; i < str.length(); i++) {
             charFrequencyMap.put(str.charAt(i), charFrequencyMap.getOrDefault(str.charAt(i), 0) + 1);
         }
-
         PriorityQueue<Map.Entry<Character,Integer>> maxHeap = new PriorityQueue<>((e1,e2)->e2.getValue() - e1.getValue());
         maxHeap.addAll(charFrequencyMap.entrySet());
 
