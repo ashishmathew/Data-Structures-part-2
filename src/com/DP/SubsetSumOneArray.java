@@ -3,7 +3,6 @@ class SubsetSumOneArray {
 
     public boolean canPartition(int[] num, int sum) {
         // TODO: Write your code here
-
         Boolean [] dp = new Boolean[sum + 1];
         dp[0] = true;
 
