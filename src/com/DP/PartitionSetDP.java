@@ -33,7 +33,7 @@ class PartitionSetDP {
               if(num[i] >= s)
                   dp[i][s] = dp[i-1][s];
               else
-                  dp[i][s] = dp[i-1][s-num[i]];
+                  dp[i][s] = dp[i-1][s] || dp[i-1][s-num[i]];
             }
         }
         return dp[num.length-1][sum/2];
